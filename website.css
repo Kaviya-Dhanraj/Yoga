@@ -1,0 +1,712 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* home styling */
+
+/* background image styles */
+.background-image {
+  transition: background-color 0.5s ease;
+  background-image: url(Images/yoga.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+.home {
+  background-color: rgba(194, 186, 186, 0.7);
+  width: 100%;
+  height: 100vh;
+}
+/* top heading styles */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 120px;
+  
+}
+
+.top-header p {
+  margin-left: 30px;
+  margin-top: -20px;
+  font-size: 13px;
+}
+
+.top-header .phone {
+  padding: 0px 20px;
+}
+
+.left {
+  display: flex;
+}
+
+.top-header svg {
+  margin-left: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+/* Navigation bar Styling */
+
+header {
+  margin-top: -10px;
+}
+
+header.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 120px;
+  color: #333;
+}
+
+header.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  width: 85%;
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex; /* Reinstate flexbox layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 120px;
+  
+}
+
+header.navbar.scrolled .nav-links a {
+  color: white;
+}
+header.navbar.scrolled .logo {
+  color: white;
+}
+
+header.navbar.scrolled .nav-links a:hover {
+  color: white;
+}
+
+header.navbar.scrolled .icon-close,
+header.navbar.scrolled .icon-burger {
+  stroke: white;
+}
+
+header.navbar.default {
+  background-color: transparent;
+  color: black;
+}
+
+header.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-left: 10px;
+}
+
+header.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+header.navbar .nav-links a {
+  color: black;
+  text-decoration: none;
+}
+
+header.navbar .nav-links a:hover {
+  color: black;
+  font-weight: 800;
+}
+
+header.navbar .hamburger {
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+header.navbar .hamburger svg {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+  transition: stroke 0.3s ease;
+}
+
+/* content styling */
+
+.content {
+  padding: 20px 120px;
+  text-align: center;
+  /* margin-top: 50px; */
+}
+
+.content .title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 17px;
+}
+
+.video-icon {
+  cursor: pointer;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Video popup container */
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  z-index: 11;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  margin-top: 50px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Fullscreen overlay styling */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10; /* Ensure overlay is on top */
+  pointer-events: none; /* Prevent it from blocking interactions */
+}
+
+.fullscreen-overlay.active {
+  opacity: 0.8; /* Adjust opacity as needed */
+  pointer-events: auto;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+/* Show the popup when active */
+.video-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* commonn styles */
+.sec-heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+/* About */
+#About {
+  padding: 20px 120px;
+}
+.div {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  font-family: serif;
+  gap: 20px;
+}
+
+#About p {
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#About h1 {
+  font-weight: 900;
+}
+
+.right1 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left1 {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left1 img {
+  width: 250px;
+  max-width: 270px;
+  height: 250px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+#pose1 {
+  margin-top: 0;
+}
+
+#Services {
+  padding: 20px 180px;
+  margin: 0 auto; /* Ensures the entire section stays centered */
+}
+
+.videos_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+  gap: 20px;
+  justify-content: center; /* Centers the grid inside the container */
+  max-width: 100%; /* Prevents overflow */
+}
+
+.videos_container video {
+  height: 250px;
+  width: 300px; /* Fixed size for videos */
+  transition: 0.5s;
+  margin: 0 auto; /* Centers each video in its grid cell */
+}
+
+.videos_container video:hover {
+  transform: scale(1.05);
+}
+
+
+.filter_buttons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #345ee7;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.filter-btn:hover {
+  background-color: #223d94;
+}
+
+.videos_container video {
+  display: none; /* By default, hide all videos */
+}
+
+.videos_container video.active {
+  display: block; /* Only display videos with the 'active' class */
+}
+
+#Gallery {
+  padding: 20px 120px;
+}
+#Gallery p {
+  line-height: 1.5;
+}
+.images-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.images-gallery img {
+  width: 300px;
+  height: 250px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+.images-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  /* border: black 1px solid; */
+}
+
+#Contact {
+  padding: 20px 120px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-area {
+  flex: 1;
+  min-width: 290px;
+  max-width: 500px;
+}
+.contact-area label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+.contact-area input,
+.contact-area textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.contact-area button {
+  background-color: #6200ea; /* Purple button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.contact-area button:hover {
+  background-color: #4b00b0;
+}
+.address-details {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
+  line-height: 2;
+}
+.address-details h4 {
+  font-size: 21px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+}
+.address-details p {
+  font-size: 15px;
+  margin: 5px 0;
+  color: #555;
+}
+
+#footer {
+  background-color: black;
+  color: rgb(196, 180, 180);
+  padding: 20px 120px;
+  line-height: 1.5;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer-content > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+#footer .Copyright {
+  text-align: center;
+}
+.quick-links ul {
+  list-style: none;
+}
+.quick-links ul li {
+  margin-top: 20px;
+}
+
+.quick-links ul li a {
+  text-decoration: none;
+  color: rgb(196, 180, 180);
+}
+.quick-links ul li a:hover {
+  color: #223d94;
+}
+.newsletter button {
+  background-color: #4b00b0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: #340572;
+}
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+/* Responsiveness */
+@media (min-width: 1640px) {
+  header.navbar.scrolled {
+    
+    width: 90%;
+    
+    
+  }
+}
+
+@media (max-width: 698px) {
+  .top-header {
+    padding: 20px;
+  }
+
+  .top-header p {
+    display: none;
+  }
+
+  header.navbar {
+    padding: 10px 15px;
+  }
+
+  header.navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding-top: 100px;
+  }
+
+  header.navbar .nav-links.active {
+    display: flex;
+    height: 90vh;
+    width: 90%;
+    top: -100px;
+  }
+  header.navbar .nav-links a:hover {
+    color: white;
+    font-weight: 800;
+  }
+  header.navbar .nav-links a {
+    padding: 20px 30px;
+    color: white;
+  }
+
+  header.navbar .hamburger {
+    display: flex;
+  }
+
+  .content {
+    padding: 20px;
+    margin-top: -10px;
+  }
+  header.navbar.scrolled {
+    position: fixed;
+    top: 0;
+    width: 85%;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex; /* Reinstate flexbox layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 20px 20px;
+  }
+  #About {
+    padding: 20px;
+  }
+  .left1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #Services {
+    padding: 20px;
+  }
+  .videos_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .videos_container video {
+    margin-bottom: -100px;
+  }
+  #Gallery {
+    padding: 20px;
+    line-height: 1.5;
+  }
+  #img {
+    margin-left: 20px;
+  }
+  #Contact {
+    padding: 20px;
+  }
+  #footer {
+    padding: 20px;
+  }
+  .videos_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .videos_container video {
+    margin-bottom: 10px;
+  }
+  .quick-links {
+    margin-left: -35px;
+  }
+}
+
+@media (max-width: 344px) {
+  header {
+    margin-bottom: 70px;
+  }
+  .content p {
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  #img {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 400px) {
+  .content p {
+    line-height: 1.5;
+    font-size: 17px;
+  }
+}
+@media (max-width: 375px) {
+  .words {
+    margin-top: -40px;
+  }
+  .video-icon {
+    margin-top: -10px;
+  }
+  #img {
+    margin-left: 5.1px;
+  }
+}
+
+/* this is for small size screens/ */
+
+@media screen and (min-width: 410px) and (max-width: 500px) {
+  .content p {
+    line-height: 1.5;
+    font-size: 17px;
+  }
+  .words {
+    margin-top: 100px;
+  }
+}
+/* this style is for medium size desktop */
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .content p {
+    line-height: 1.5;
+    font-size: 19px;
+  }
+  header.navbar.scrolled {
+    position: fixed;
+    top: 0;
+    width: 85%;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex; /* Reinstate flexbox layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 20px 50px;
+  }
+  .top-header p {
+    font-size: 11px;
+  }
+  .videos_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  }
+  .images-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* this is for centrize the content for ipad pro */
+@media (max-width: 1024px) and (min-height: 1300px) {
+  .content p {
+    line-height: 1.5;
+    font-size: 19px;
+  }
+}
+/* This is for hamburger menu which is for the 1000px */
+@media (max-width: 1000px) {
+  header.navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding-top: 100px;
+  }
+
+  header.navbar .nav-links.active {
+    display: flex;
+    height: 65vh;
+    width: 90%;
+    top: 60px;
+  }
+  header.navbar .nav-links a:hover {
+    color: white;
+    font-weight: 900;
+  }
+  header.navbar .nav-links a {
+    padding: 20px 30px;
+    color: white;
+  }
+
+  header.navbar .hamburger {
+    display: flex;
+  }
+}
+
+/*************************************************************/
+
+.nav-link.active {
+  font-weight: bold;
+  color: grey;
+}
