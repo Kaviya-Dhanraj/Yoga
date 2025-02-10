@@ -29,11 +29,17 @@ Make sure you have a web browser installed (Chrome, Firefox, Edge, etc.).
 
 ### Project Structure
 Yoga/
+
 │── Images/            # Contains all images used in the project
+
 │── index.html         # Main HTML file
+
 │── website.css        # Stylesheet for the website
+
 │── website.js         # JavaScript for interactive features
+
 │── Magic of Yoga.mp4  # Video file for yoga demonstration
+
 
 ### 🏃‍♂️ Usage
 Open index.html in a browser to view the website.
